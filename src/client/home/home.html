@@ -13,9 +13,9 @@
   </select>
 </div>
 
-<div class="col-xs-3" ng-repeat="date in dates">
+<div class="col-xs-3" ng-repeat="date in dates | filter: sort">
   <div style="text-align: center;">
     <h3>{{date.username}}</h3>
-    <button class="displaybutton"><a ng-click="setCurrentDate(date.id)" href="/#/showpage"><img ng-src="{{date.avatar}}"></a></button>
+    <button class="displaybutton"><a ng-click="setCurrentDate(date._id)" href="/#/showpage"><img ng-src="{{date.avatar}}"></a></button>
   </div>
 </div>

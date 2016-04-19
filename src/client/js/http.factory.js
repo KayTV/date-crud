@@ -22,7 +22,7 @@ angular.module('app')
 
   factory.setCurrentDate = function(id) {
     dateId = id;
-    console.log('movieId', dateId);
+    console.log('dateId', dateId);
     return dateId;
   }
 
