@@ -1,4 +1,15 @@
-<h1>{{title}}</h1>
+<h1 class="headername">{{title}}</h1>
+<img ng-src="http://www.webweaver.nu/clipart/img/holidays/valentines/hearts/row-of-hearts.png" class="headerimg">
+
+<div class="col-xs-6">
+  <input ng-model="sort" class="form-control" placeholder="Find Love!"></input>
+</div>
+<div class="col-xs-6">
+  <select ng-model="rate" class="form-control">
+    <option value="NA">N/A</option>
+    <option value="-rating">Rating</option>
+  </select>
+</div>
 
 <div class="col-xs-3" ng-repeat="date in dates">
   <div>

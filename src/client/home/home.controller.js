@@ -7,7 +7,6 @@ angular.module('app')
       .then(function(response){
         console.log(response);
         $scope.dates = response.data.data;
-        console.log($scope.dates);
       });
   };
   activate();
