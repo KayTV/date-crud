@@ -1,12 +1,14 @@
 angular.module('app')
 .controller('ShowpageController', ['$scope', '$location', 'httpFactory', function($scope, $location, httpFactory){
   $scope.title = 'test';
+
   function activate() {
     var id = httpFactory.getCurrentDate();
     httpFactory.getDate(id)
     .then(function(response){
       console.log(response);
-      $scope.date = response.data;
+      $scope.date = response.data.data;
+      console.log($scope.date);
     });
   }
   activate();

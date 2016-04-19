@@ -13,7 +13,7 @@
   </select>
 </div>
 
-<div class="col-xs-3" ng-repeat="date in dates | filter: sort">
+<div class="col-xs-3" ng-if="date.active" ng-repeat="date in dates | filter: sort">
   <div style="text-align: center;">
     <h3>{{date.username}}</h3>
     <button class="displaybutton"><a ng-click="setCurrentDate(date._id)" href="/#/showpage"><img ng-src="{{date.avatar}}"></a></button>

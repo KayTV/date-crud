@@ -1,9 +1,9 @@
 angular.module('app')
 .controller('HomeController', ['$scope', 'httpFactory', function($scope, httpFactory){
-  $scope.title = 'Home';
+  $scope.title = 'Channels of Love';
 
   function activate() {
-    httpFactory.getDate()
+    httpFactory.getDates()
       .then(function(response){
         console.log(response);
         $scope.dates = response.data.data;
@@ -14,7 +14,6 @@ angular.module('app')
   $scope.setCurrentDate = function(id) {
     httpFactory.setCurrentDate(id)
       console.log(id);
-      // $scope.successMessage = 'Updated ' + $scope.movies[index].title;
   };
 
 }]);
