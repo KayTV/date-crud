@@ -1,1 +1,8 @@
 <h1>{{title}}</h1>
+
+<div class="col-xs-3" ng-repeat="date in dates">
+  <div>
+    <h3>{{date.username}}</h3>
+    <button><img ng-src="{{date.avatar}}"></button>
+  </div>
+</div>
