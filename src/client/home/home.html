@@ -1,5 +1,7 @@
-<h1 class="headername">{{title}}</h1>
-<img ng-src="http://www.webweaver.nu/clipart/img/holidays/valentines/hearts/row-of-hearts.png" class="headerimg">
+<header>
+  <h1 class="headername">{{title}}</h1>
+  <img ng-src="http://www.christblessing.org/wp-content/uploads/2015/12/row-of-hearts-1024x322.png" class="headerimg">
+</header>
 
 <div class="col-xs-6">
   <input ng-model="sort" class="form-control" placeholder="Find Love!"></input>
@@ -12,8 +14,8 @@
 </div>
 
 <div class="col-xs-3" ng-repeat="date in dates">
-  <div>
+  <div style="text-align: center;">
     <h3>{{date.username}}</h3>
-    <button><img ng-src="{{date.avatar}}"></button>
+    <button class="displaybutton"><a ng-click="setCurrentDate(date.id)" href="/#/showpage"><img ng-src="{{date.avatar}}"></a></button>
   </div>
 </div>

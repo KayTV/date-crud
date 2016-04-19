@@ -5,6 +5,10 @@ angular.module('app', ['ngRoute'])
       templateUrl: 'home/home.html',
       controller: 'HomeController'
     })
+    .when('/showpage', {
+      templateUrl: 'showpage/showpage.html',
+      controller: 'ShowpageController'
+    })
     .when('/register', {
       templateUrl: 'auth/register/register.html',
       controller: 'RegisterController'

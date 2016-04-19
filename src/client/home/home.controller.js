@@ -11,4 +11,10 @@ angular.module('app')
   };
   activate();
 
+  $scope.setCurrentDate = function(id) {
+    httpFactory.setCurrentDate(id)
+      console.log(id);
+      // $scope.successMessage = 'Updated ' + $scope.movies[index].title;
+  };
+
 }]);

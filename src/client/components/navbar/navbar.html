@@ -10,8 +10,7 @@
       <a class="navbar-brand" href="/#/"><img src="http://www.nureek.com/zozo/products_pages/pixel-hearts.png" style="width: 110%;"/></a>
     </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/#/products" class="navstyle">Game Library</a></li>
-        <li><a href="/#/add_game" class="navstyle">Add Game</a></li>
+        <li><a href="#" class="navstyle">Profile</a></li>
         <li ng-if="!vm.isAuthenticated()"><a href="/#/register" class="navstyle"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li ng-if="!vm.isAuthenticated()"><a href="/#/login" class="navstyle"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         <li ng-if="vm.isAuthenticated()" ng-controller="LogoutController"><a href="/#/" ng-click="logout()" class="navstyle"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>

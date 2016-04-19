@@ -95,3 +95,15 @@
 	  border-top-right-radius: 0;
 	}
 }
+
+.displaybutton {
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 7px 7px 7px red;
+  background-color: pink;
+}
+
+img {
+  border-radius: 5px;
+}
