@@ -3,17 +3,24 @@
   <img ng-src="http://www.christblessing.org/wp-content/uploads/2015/12/row-of-hearts-1024x322.png" class="headerimg">
 </header>
 
-<div class="col-xs-6">
-  <input ng-model="sort" class="form-control" placeholder="Find Love!"></input>
-</div>
-<div class="col-xs-6">
-  <select ng-model="rate" class="form-control">
-    <option value="NA">N/A</option>
-    <option value="-rating">Rating</option>
+<div class="col-xs-4">
+  <label for="gender">1. What Gender Do You Like?</label>
+  <select ng-model="gend" class="form-control" ng-options="gender for gender in genders" name="gender">
+    <pre>{{gender}}</pre>
   </select>
 </div>
+<div class="col-xs-4">
+  <label for="gender">2. What Gender Are You?</label>
+  <select ng-model="interest" class="form-control">
+    <option value="-interestedIn">Rating</option>
+  </select>
+</div>
+<div class="col-xs-4">
+  <label for="gender">3. Search For Love!</label>
+  <input ng-model="sort" class="form-control" placeholder="Find Love!"></input>
+</div>
 
-<div class="col-xs-3" ng-if="date.active" ng-repeat="date in dates | filter: sort">
+<div class="col-xs-3" ng-if="date.active" ng-repeat="date in dates | genderfilter: gend | filter: sort | orderBy: interest">
   <div style="text-align: center;">
     <h3>{{date.username}}</h3>
     <button class="displaybutton"><a ng-click="setCurrentDate(date._id)" href="/#/showpage"><img ng-src="{{date.avatar}}"></a></button>

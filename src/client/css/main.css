@@ -107,3 +107,11 @@
 img {
   border-radius: 5px;
 }
+
+.chatwindow {
+  height: 200px;
+  overflow: scroll;
+  border-radius: 5px;
+  background-color: pink;
+  margin-bottom: 10px;
+}

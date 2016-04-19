@@ -7,6 +7,16 @@ angular.module('app')
       .then(function(response){
         console.log(response);
         $scope.dates = response.data.data;
+        $scope.genders = $scope.dates.map(function(date){
+          return date.gender;
+        }).filter(function(type, index, array){
+          return array.indexOf(type)===index;
+        })
+        $scope.cities = $scope.dates.map(function(date){
+          return date.address.city;
+        }).filter(function(type, index, array){
+          return array.indexOf(type)===index;
+        })
       });
   };
   activate();

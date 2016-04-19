@@ -13,8 +13,17 @@
       <button><i class="fa fa-times" aria-hidden="true"></i> Dislike</button>
     </div>
     <h3>Email: {{date.email}}</h3>
-    <h3>Birthday: {{date.dob}}</h3>
+    <h3>Birthday: {{date.dob | date:'MMM-dd-yyyy HH:mm:ss Z'}}</h3>
+    <button class="btn btn-danger">Delete User</button>
+    <button class="btn btn-success" ng-click="show=!show"><i class="fa fa-commenting-o" aria-hidden="true"></i> Connect</button>
+    <div ng-show="show">
+        <h4>Chat With {{date.names.firstName}}!</h4>
+        <div class="chatwindow"></div>
+        <form class="form" ng-submit="sendMsg()">
+          <input class="form-control" type="text" ng-model="message">
+          <br>
+          <button class="button btn btn-success">Send</button>
+        </form>
+    </div>
   </div>
-  <button class="btn btn-danger">Delete User</button>
-  <button class="btn btn-success"><i class="fa fa-commenting-o" aria-hidden="true"></i> Connect</button>
 </section>
