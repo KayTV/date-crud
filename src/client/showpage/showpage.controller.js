@@ -14,4 +14,11 @@ angular.module('app')
   }
   activate();
 
+  $scope.saveDate = function() {
+    httpFactory.saveDate($scope.date)
+    .then(function(response){
+      console.log('response', response);
+    })
+  }
+
 }]);

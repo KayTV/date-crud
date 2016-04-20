@@ -26,6 +26,14 @@ angular.module('app')
     return dateId;
   }
 
+  factory.saveDate = function(date) {
+    return $http ({
+      method: 'POST',
+      url: '/date',
+      data: {date: date}
+    });
+  };
+
   return factory;
 
 }]);
