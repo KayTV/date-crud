@@ -115,3 +115,10 @@ img {
   background-color: pink;
   margin-bottom: 10px;
 }
+
+.buttonshow {
+  width: 100px;
+  font-family: 'Exo', sans-serif;
+  border-radius: 15px;
+  padding: 5px;
+}

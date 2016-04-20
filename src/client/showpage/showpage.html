@@ -9,13 +9,13 @@
   </div>
   <div class="col-xs-6">
     <div class="row">
-      <button><i class="fa fa-heart" aria-hidden="true"></i> Like!!</button>
-      <button><i class="fa fa-times" aria-hidden="true"></i> Dislike</button>
+      <button class="buttonshow" style="background-color: pink;"><i class="fa fa-heart" aria-hidden="true"></i> Like!!</button>
+      <button class="buttonshow" style="background-color: red;"><i class="fa fa-times" aria-hidden="true"></i> Dislike</button>
     </div>
     <h3>Email: {{date.email}}</h3>
-    <h3>Birthday: {{date.dob | date:'MMM-dd-yyyy HH:mm:ss Z'}}</h3>
-    <button class="btn btn-danger">Delete User</button>
-    <button class="btn btn-success" ng-click="show=!show"><i class="fa fa-commenting-o" aria-hidden="true"></i> Connect</button>
+    <h3>Birthday: {{date.dob | date:'MMM-dd-yyyy, HH:mm:ss Z'}}</h3>
+    <button class="buttonshow" style="background-color: red;">Delete User</button>
+    <button class="buttonshow" style="background-color: pink;" ng-click="show=!show"><i class="fa fa-commenting-o" aria-hidden="true"></i> Connect</button>
     <div ng-show="show">
         <h4>Chat With {{date.names.firstName}}!</h4>
         <div class="chatwindow">
@@ -24,7 +24,7 @@
         <form class="form" ng-submit="sendMsg()">
           <input class="form-control" type="text" ng-model="message">
           <br>
-          <button class="button btn btn-success">Send</button>
+          <!-- <button class="button btn btn-success">Send</button> -->
         </form>
     </div>
   </div>
