@@ -1,6 +1,8 @@
-<header>
+<header style="text-align:center;">
   <h1 class="headername">{{date.names.firstName}} {{date.names.lastName}}</h1>
-</header>
+    <button class="buttonshow" style="background-color: pink;"><i class="fa fa-heart" aria-hidden="true"></i> Like!!</button>
+    <button class="buttonshow" style="background-color: red;"><i class="fa fa-times" aria-hidden="true"></i> Dislike</button>
+</header><hr>
 
 <section style="text-align: center;">
   <div class="col-xs-6">
@@ -8,12 +10,9 @@
     <h3>Username: {{date.username}}</h3>
   </div>
   <div class="col-xs-6">
-    <div class="row">
-      <button class="buttonshow" style="background-color: pink;"><i class="fa fa-heart" aria-hidden="true"></i> Like!!</button>
-      <button class="buttonshow" style="background-color: red;"><i class="fa fa-times" aria-hidden="true"></i> Dislike</button>
-    </div>
     <h3>Email: {{date.email}}</h3>
     <h3>Birthday: {{date.dob | date:'MMM-dd-yyyy, HH:mm:ss Z'}}</h3>
+    <p>Bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <button class="buttonshow" style="background-color: red;">Delete User</button>
     <button class="buttonshow" style="background-color: pink;" ng-click="show=!show"><i class="fa fa-commenting-o" aria-hidden="true"></i> Connect</button>
     <div ng-show="show">
@@ -22,7 +21,7 @@
           <h4>{{message}}</h4>
         </div>
         <form class="form" ng-submit="sendMsg()">
-          <input class="form-control" type="text" ng-model="message">
+          <input class="form-control" type="text" ng-model="message" placeholder="Chat!!">
           <br>
           <!-- <button class="button btn btn-success">Send</button> -->
         </form>
