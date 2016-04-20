@@ -79,4 +79,11 @@ router.post('/date', function(req, res, next) {
   })
 })
 
+router.get('/profile', function(req, res, next) {
+  Dates().select()
+  .then(function(dates){
+    res.json(dates);
+  })
+})
+
 module.exports = router;

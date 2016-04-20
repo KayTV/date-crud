@@ -34,6 +34,13 @@ angular.module('app')
     });
   };
 
+  factory.getProfile = function() {
+    return $http({
+      method: 'GET',
+      url: '/profile'
+    });
+  };
+
   return factory;
 
 }]);
