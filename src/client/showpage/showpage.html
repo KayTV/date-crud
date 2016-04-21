@@ -1,7 +1,7 @@
 <header style="text-align:center;">
   <h1 class="headername">{{date.names.firstName}} {{date.names.lastName}}</h1>
     <button ng-click="saveDate(); save=!save" class="buttonshow" style="background-color: pink;"><i class="fa fa-heart" aria-hidden="true"></i> Like!!</button>
-    <button class="buttonshow" style="background-color: red;"><i class="fa fa-times" aria-hidden="true"></i> Dislike</button><br>
+    <button class="buttonshow" ng-click="dislikeDate()"style="background-color: red;"><i class="fa fa-times" aria-hidden="true"></i> Dislike</button><br>
       <div ng-show="save">
         <h4>Saved {{date.names.firstName}}!!</h4>
         <img ng-src="https://upload.wikimedia.org/wikipedia/commons/5/50/Heart-beat.gif">

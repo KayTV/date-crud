@@ -22,4 +22,8 @@ angular.module('app')
     })
   }
 
+  $scope.dislikeDate = function() {
+    $location.path('/');
+  }
+
 }]);
