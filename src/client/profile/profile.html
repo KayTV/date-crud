@@ -1,3 +1,33 @@
-<header>
-  <h1 class="headername">{{title}}</h1>
-</header>
+<div class="profilepage">
+  <header>
+    <h1 class="headername">{{title}}</h1>
+    <h1>Bender Bending Rodriguez</h1>
+  </header><hr>
+
+  <section class="row">
+    <div class="col-xs-6">
+      <img ng-src="http://cs418723.vk.me/v418723742/4a92/d-ejSTu3Y3U.jpg">
+    </div>
+    <div class="col-xs-6">
+      <h2>Phone: 110-001-0101</h2>
+      <h2>Email: BiteMyShineyMetal@Ass.com</h2>
+      <h2>Username: Kill_All_Humans</h2>
+      <h4>Address: 001 Robot Apts., New New York</h4>
+      <p>Bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section><br>
+
+  <section class="row">
+    <h1 class="headername">Ones I Like</h1><hr>
+    <div ng-repeat="date in dates">
+      <div class="col-xs-3">
+        <div class="displaybutton" style="margin: 15px; padding-bottom: 20px;">
+          <h3>{{date.username}}</h3>
+          <img ng-src="{{date.avatar}}">
+          <h4>{{date.firstname}} {{date.lastname}}</h4>
+          <h5>P: {{date.phone}}</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

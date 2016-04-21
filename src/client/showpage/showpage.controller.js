@@ -2,6 +2,7 @@ angular.module('app')
 .controller('ShowpageController', ['$scope', '$location', 'httpFactory', function($scope, $location, httpFactory){
   $scope.title = 'test';
   $scope.show = false;
+  $scope.save = false;
 
   function activate() {
     var id = httpFactory.getCurrentDate();
