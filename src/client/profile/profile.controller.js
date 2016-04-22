@@ -15,10 +15,8 @@ angular.module('app')
     httpFactory.deleteDateProfile(id)
     .then(function(response){
       console.log('deleted date');
-      // $location.path('/profile');
       $route.reload();
     })
-    // window.location = "/#/my_movies"
   }
 
 
