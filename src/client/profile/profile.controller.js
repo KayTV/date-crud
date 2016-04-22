@@ -1,5 +1,5 @@
 angular.module('app')
-.controller('ProfileController', ['$scope', 'httpFactory', function($scope, httpFactory){
+.controller('ProfileController', ['$scope', '$route', 'httpFactory', function($scope, $route, httpFactory){
   $scope.title = 'Profile';
 
   function activate() {
@@ -10,6 +10,16 @@ angular.module('app')
       });
   };
   activate();
+
+  $scope.deleteDateProfile = function(id) {
+    httpFactory.deleteDateProfile(id)
+    .then(function(response){
+      console.log('deleted date');
+      // $location.path('/profile');
+      $route.reload();
+    })
+    // window.location = "/#/my_movies"
+  }
 
 
 }]);

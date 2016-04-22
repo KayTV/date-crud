@@ -86,4 +86,11 @@ router.get('/profile', function(req, res, next) {
   })
 })
 
+router.delete('/delete/:id', function(req, res, next){
+  Dates().where('id', req.params.id).del()
+  .then(function(result){
+    res.json(result);
+  })
+})
+
 module.exports = router;

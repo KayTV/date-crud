@@ -41,6 +41,13 @@ angular.module('app')
     });
   };
 
+  factory.deleteDateProfile = function(id) {
+    return $http({
+      method: 'DELETE',
+      url: '/delete/'+id
+    });
+  }
+
   return factory;
 
 }]);
